@@ -1,0 +1,36 @@
+<h1>Agregar Restaurante</h1>
+
+<form action="/restaurants" method="POST" class="mt-4">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <!-- Text input -->
+  <div class="form-outline mb-4">
+    <input type="text" name="name" class="form-control" />
+    <label class="form-label" for="form6Example3">Name</label>
+  </div>
+
+  <!-- Text input -->
+  <div class="form-outline mb-4">
+    <input type="text" name="address" class="form-control" />
+    <label class="form-label" for="form6Example4">Address</label>
+  </div>
+
+  <!-- Number input -->
+  <div class="form-outline mb-4">
+    <input type="number" name="phone_number" class="form-control" />
+    <label class="form-label" for="form6Example6">Phone</label>
+  </div>
+
+  <div class="form-outline mb-4">
+    <select name="category" class="form-select" aria-label="Default select example">
+      <option selected>Select a category</option>
+      <option value="chinese">Chinese</option>
+      <option value="italian">Italian</option>
+      <option value="japanese">Japanese</option>
+      <option value="french">French</option>
+      <option value="belgian">Belgian</option>
+    </select>
+  </div>
+
+  <!-- Submit button -->
+  <button type="submit" class="btn btn-primary btn-block mb-4">Registrar</button>
+</form>

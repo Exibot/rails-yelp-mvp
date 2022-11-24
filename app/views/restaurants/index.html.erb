@@ -1,0 +1,17 @@
+<div class="mt-5">
+  <div class="row">
+    <div class="col-6"><h1>Restaurantes</h1></div>
+    <div class="col-6"><a class="btn btn-primary" href="restaurants/new" role="button">Nuevo</a></div>
+  </div>
+  <ol class="list-group list-group-numbered">
+    <% @restaurants.each do |restaurant| %>
+      <li class="list-group-item d-flex justify-content-between align-items-start">
+        <div class="ms-2 me-auto">
+          <div class="fw-bold"><a href="/restaurants/<%=restaurant.id%>"><%= restaurant.name %></a></div>
+          <%= restaurant.address %>
+        </div>
+        <span class="badge bg-warning rounded-pill">Rating</span>
+      </li>
+    <%end%>
+  </ol>
+</div>
