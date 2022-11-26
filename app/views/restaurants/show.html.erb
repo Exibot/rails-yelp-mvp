@@ -4,4 +4,11 @@
 <p>Telefono: <%= @restaurant.phone_number%></p>
 <p>Categoria: <%= @restaurant.category%></p>
 
+<% @restaurant.reviews.each do |review| %>
+  <p>
+  Rating: <%= review.rating %>
+  <%= review.content %>
+  </p>
+<% end %>
+
 <%= link_to "Inicio", restaurants_path %>

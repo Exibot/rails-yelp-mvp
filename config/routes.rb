@@ -5,5 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: 'restaurants#index'
 
-  resources :restaurants
+  resources :restaurants do
+    resources :reviews, only: [:new]
+  end
 end
